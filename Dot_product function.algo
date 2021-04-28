@@ -1,0 +1,26 @@
+FUNCTION dot( T1: ARRAY_OF INTEGER [],T2: ARRAY_OF INTEGER []) : INTEGER
+VAR
+  ps: INTEGER:=0
+  i:INTEGER
+BEGIN
+    FOR i FROM 0 TO T1.length  DO
+        ps:=ps+ T1[i]*T2[i]
+    END_FOR
+    RETURN ps ;
+END 
+
+ALGORITHM dot_product
+VAR
+  i,ps:INTEGER
+  V1,V2 : ARRAY_OF INTEGER[length];
+BEGIN
+    FOR i FROM 0 TO 7  DO
+    write('ENTER v1 and v2')
+       READ(V1)
+       READ(V2)
+       ps=dot(V1,V2)
+       IF (ps=0) THEN
+          WRITE('V1 and V2 are orth')
+       END_IF
+    END_FOR
+END
